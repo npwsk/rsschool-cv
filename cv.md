@@ -23,14 +23,18 @@ Developing user interfaces is my passion. I am currently learning and hope to be
 ## Code Example:
 
 ```javascript
-function filterHomogenous(arrays) {
-  const isHomogenous = (arr) => {
-    const types = arr.map((elem) => typeof elem);
-    const [firstType] = types;
-    return types.every((type) => firstType === type);
-  };
-  return arrays.filter((arr) => arr.length > 0).filter(isHomogenous);
-}
+let rotateMatrix = (arr) => {
+  const rowsCount = arr.length;
+  const [firstRow] = arr;
+  const columnsCount = firstRow.length;
+  const rotatedMatrix = [...new Array(columnsCount)].map(() => []);
+  for (let row = 0; row < columnsCount; row += 1) {
+    for (let column = 0; column < rowsCount; column += 1) {
+      rotatedMatrix[row][column] = arr[column][columnsCount - 1 - row];
+    }
+  }
+  return rotatedMatrix;
+};
 ```
 
 ## Experience:
