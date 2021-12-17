@@ -9,7 +9,7 @@
 
 ## About Me:
 
-Developing user interfaces is my passion. I am currently learning and hope to be able to create good looking, user-friendly and fast interfaces soon. My goal is to start a career as a Front-End developer.
+Developing user interfaces is my passion. I am currently learning and hope to be able to create good looking, user-friendly and fast interfaces soon. I am also a 3rd year student studying applied computer science. My goal is to start a career as a Front-End developer.
 
 ## Skills:
 
@@ -45,7 +45,7 @@ let rotateMatrix = (arr) => {
 
 ## Education:
 
-- 2019 - 2024: **Tomsk State University of Control Systems and Radioelectronics**, Applied Informatics in Economics
+- 2019 - 2024: **Tomsk State University of Control Systems and Radioelectronics**, Applied Computer Science in Economics
 - 2021: **Online courses** at:
   - [Hexlet](https://ru.hexlet.io/u/bbngpw)
   - [HTML Academy](https://htmlacademy.ru/profile/id421001)
