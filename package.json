@@ -1,0 +1,20 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "https://npwsk.github.io/rsschool-cv/cv",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:npwsk/rsschool-cv.git"
+  },
+  "license": "ISC",
+  "author": "Nika Perfilova",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.0.0",
+    "stylelint": "^14.2.0",
+    "stylelint-config-htmlacademy": "^0.1.12"
+  }
+}
