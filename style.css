@@ -1,11 +1,12 @@
 /* ------ Custom properties ------ */
 :root {
-  --clr-darkgreen: hsl(72deg 40% 36%);
-  --clr-lightgreen: hsl(72deg 40% 46%);
-  --clr-yellow: hsl(41deg 73% 70%);
-  --clr-white: hsl(0deg 0% 100%);
-  --clr-light: hsl(52deg 25% 88%);
-  --clr-red: hsl(6deg 39% 43%);
+  --clr-darkgreen: 72 40% 36%;
+  --clr-lightgreen: 72 40% 46%;
+  --clr-yellow: 41 73% 70%;
+  --clr-white: 0 0% 100%;
+  --clr-light: 52 25% 88%;
+  --clr-dark: 44 0% 0%;
+  --clr-red: 6 39% 43%;
 
   --clr-html: 12 78% 52%;
   --clr-css: 205 79% 40%;
@@ -26,6 +27,8 @@
   --zindex-modal: 1050;
   --zindex-popover: 1060;
   --zindex-tooltip: 1070;
+
+  --maxwidth-content: 50rem;
 }
 
 /* ------ Reset ------ */
@@ -71,7 +74,7 @@ html {
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-color: var(--clr-white);
+  background-color: hsl(var(--clr-white));
 }
 
 .container {
@@ -109,7 +112,7 @@ body {
   position: sticky;
   top: 0;
   z-index: var(--zindex-sticky);
-  background-color: var(--clr-white);
+  background-color: hsl(var(--clr-white));
   box-shadow: rgba(0, 0, 0, 0.08) 0 4px 12px;
 }
 
@@ -176,7 +179,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: var(--clr-light);
+  background-color: hsl(var(--clr-light));
   border-radius: 50%;
   transform: translate(-20px, 15px);
 }
@@ -210,8 +213,8 @@ body {
   align-self: flex-start;
   margin: 0;
   padding: 1rem 1.5rem;
-  color: var(--clr-white);
-  background-color: var(--clr-lightgreen);
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-lightgreen));
   border-radius: 1rem;
   cursor: pointer;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -287,7 +290,7 @@ body {
 
 .code-example__snippet-container {
   margin-inline: auto;
-  width: 50rem;
+  max-width: var(--maxwidth-content);
 }
 
 .code-example__pre {
@@ -300,6 +303,38 @@ body {
   font-family: "Fira Code", monospace;
   line-height: 1.6;
   border-radius: 1em;
+}
+
+.education__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-inline: auto;
+  max-width: calc(var(--maxwidth-content) * 0.9);
+}
+
+.education__item {
+  display: flex;
+}
+
+.education__column--narrow {
+  min-width: 10rem;
+}
+
+.education__date {
+  color: hsl(var(--clr-darkgreen));
+  font-size: 0.8rem;
+}
+
+.education__item-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.education__item-description {
+  color: hsl(var(--clr-dark) / 0.3);
+  font-size: 0.9rem;
 }
 
 /* ------ Footer ------ */
