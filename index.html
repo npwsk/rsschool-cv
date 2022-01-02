@@ -22,6 +22,16 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css" />
 
+    <!-- Highlight.js -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -152,13 +162,12 @@
         </div>
       </section>
 
-      <section class="code-example">
+      <section class="section" id="code-example">
         <div class="container">
           <h2 class="code-example__title title">Code example</h2>
-          <div>
-            <code>
-              <pre class="code-example__code">
-let rotateMatrix = (arr) =&gt; {
+          <div class="code-example__snippet-container">
+            <pre class="code-example__pre">
+                <code class="code-example__code language-javascript">let rotateMatrix = (arr) =&gt; {
   const rowsCount = arr.length;
   const [firstRow] = arr;
   const columnsCount = firstRow.length;
@@ -169,9 +178,8 @@ let rotateMatrix = (arr) =&gt; {
     }
   }
   return rotatedMatrix;
-};</pre
-              >
-            </code>
+};</code>
+</pre>
           </div>
         </div>
       </section>
@@ -255,5 +263,10 @@ let rotateMatrix = (arr) =&gt; {
         /></a>
       </div>
     </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
