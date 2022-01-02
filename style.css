@@ -7,6 +7,18 @@
   --clr-light: hsl(52deg 25% 88%);
   --clr-red: hsl(6deg 39% 43%);
 
+  --clr-html: 12 78% 52%;
+  --clr-css: 205 79% 40%;
+  --clr-sass: 330 49% 60%;
+  --clr-bootstrap: 268 93% 50%;
+  --clr-javascript: 52 84% 63%;
+  --clr-react: 193 95% 68%;
+  --clr-nodejs: 87 67% 48%;
+  --clr-webpack: 206 75% 43%;
+  --clr-git: 11 89% 56%;
+
+  --opacity-skill-bg: 0.1;
+
   --zindex-dropdown: 1000;
   --zindex-sticky: 1020;
   --zindex-fixed: 1030;
@@ -66,6 +78,29 @@ body {
   margin-inline: auto;
   padding-inline: 1rem;
   max-width: 80rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: normal !important;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.section {
+  padding-bottom: 3rem;
+}
+
+.title {
+  margin-bottom: 2em;
+  /* font-weight: 400; */
+  text-align: center;
 }
 
 /* ------ Header ------ */
@@ -183,7 +218,7 @@ body {
 }
 
 .about__button:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  box-shadow: hsla(0, 0%, 0%, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
@@ -194,6 +229,64 @@ body {
 
 .code-example__code {
   font-family: "Fira Code", monospace;
+}
+
+.skills__list {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+  width: 24rem;
+}
+
+.skills__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+.skills__icon {
+  width: 2.5em;
+  aspect-ratio: 1 / 1;
+}
+
+.skills__html {
+  background-color: hsla(var(--clr-html) / var(--opacity-skill-bg));
+}
+
+.skills__css {
+  background-color: hsl(var(--clr-css) / var(--opacity-skill-bg));
+}
+
+.skills__sass {
+  background-color: hsl(var(--clr-sass) / var(--opacity-skill-bg));
+}
+
+.skills__bootstrap {
+  background-color: hsl(var(--clr-bootstrap) / var(--opacity-skill-bg));
+}
+
+.skills__javascript {
+  background-color: hsl(var(--clr-javascript) / var(--opacity-skill-bg));
+}
+
+.skills__react {
+  background-color: hsl(var(--clr-react) / var(--opacity-skill-bg));
+}
+
+.skills__nodejs {
+  background-color: hsl(var(--clr-nodejs) / var(--opacity-skill-bg));
+}
+
+.skills__webpack {
+  background-color: hsl(var(--clr-webpack) / var(--opacity-skill-bg));
+}
+
+.skills__git {
+  background-color: hsl(var(--clr-git) / var(--opacity-skill-bg));
 }
 
 /* ------ Footer ------ */
