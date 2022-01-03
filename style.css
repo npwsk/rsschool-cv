@@ -188,8 +188,8 @@ body {
 
 .about__img-container {
   position: relative;
-  width: 17rem;
-  height: 17rem;
+  width: 13rem;
+  aspect-ratio: 1 / 1;
   margin-left: 20px;
   border-radius: 50%;
 }
