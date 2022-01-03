@@ -251,28 +251,68 @@
       <section class="section">
         <div class="container">
           <h2 class="title">Languages</h2>
+          <ul class="languages__list">
+            <li class="languages__item">
+              <h3 class="item-title">English</h3>
+              <div class="languages__level">C1</div>
+            </li>
+            <li class="languages__item">
+              <h3 class="item-title">Russian</h3>
+              <div class="languages__level">Native</div>
+            </li>
+          </ul>
         </div>
-        <ul class="languages__list">
-          <li class="languages__item">
-            <h3 class="item-title">English</h3>
-            <div class="languages__level">C1</div>
-          </li>
-          <li class="languages__item">
-            <h3 class="item-title">Russian</h3>
-            <div class="languages__level">Native</div>
-          </li>
-        </ul>
       </section>
 
-      <section class="contact-me" id="contact-me">
+      <section class="section" id="contact-me">
         <div class="container">
-          <div class="contact-me__contacts">
-            <ul>
-              <li><a href="mailto:perfil.nika@gmail.com">e-mail</a></li>
-              <li><a href="https://t.me/nika_perfilova">telegram</a></li>
-              <li>discord: Nika Perfilova (@npwsk)</li>
-              <li><a href="https://github.com/npwsk">github</a></li>
+          <h2 class="title">Contact me</h2>
+          <div class="contact__content">
+            <ul class="contact__list">
+              <li class="contact__list-item email-contact">
+                <span class="visually-hidden">Email</span>
+                <a href="mailto:perfil.nika@gmail.com">perfil.nika@gmail.com</a>
+              </li>
+              <li class="contact__list-item telegram-contact">
+                <span class="visually-hidden">Telegram</span
+                ><a href="https://t.me/nika_perfilova">@nika_perfilova</a>
+              </li>
+              <li class="contact__list-item discord-contact">
+                <span class="visually-hidden">Discord</span>Nika Perfilova (@npwsk)
+              </li>
+              <li class="contact__list-item github-contact">
+                <span class="visually-hidden">Github</span
+                ><a href="https://github.com/npwsk">github</a>
+              </li>
             </ul>
+            <form
+              class="contact__form"
+              action="https://formsubmit.co/perfil.nika@gmail.com"
+              method="post"
+            >
+              <input type="hidden" name="_next" value="#" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <div class="contact__form-item">
+                <label class="contact__label" for="name">Your Name</label>
+                <input class="contact__input" type="text" id="name" name="name" required />
+              </div>
+              <div class="contact__form-item">
+                <label class="contact__label" for="email">Your email address</label>
+                <input class="contact__input" type="email" id="email" name="email" required />
+              </div>
+              <div class="contact__form-item">
+                <label class="contact__label" for="message">Your message...</label>
+                <textarea
+                  class="contact__textarea"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button class="contact__submit-btn" type="submit">Send</button>
+            </form>
           </div>
         </div>
       </section>

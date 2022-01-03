@@ -355,4 +355,85 @@ body {
   text-transform: uppercase;
 }
 
+.contact__content {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact__list-item {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding: 1em;
+  font-weight: 700;
+  border-radius: 1em;
+}
+
+.contact__list-item::before {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.email-contact::before {
+  background-image: url("images/icons/mail-icon.svg");
+}
+
+.telegram-contact::before {
+  background-image: url("images/icons/telegram-icon.webp");
+}
+
+.discord-contact::before {
+  background-image: url("images/icons/discord-icon.svg");
+}
+
+.github-contact::before {
+  background-image: url("images/icons/github-icon.svg");
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact__label {
+  display: block;
+  color: hsl(var(--clr-dark) / 0.3);
+  font-size: 1em;
+}
+
+.contact__input,
+.contact__textarea {
+  width: 25em;
+  padding: 0.5em;
+}
+
+.contact__input,
+.contact__input:focus,
+.contact__textarea,
+.contact__textarea:focus {
+  border: 1px solid hsl(var(--clr-dark) / 0.3);
+  outline: none;
+}
+
+.contact__textarea {
+  resize: none;
+}
+
+.contact__submit-btn {
+  cursor: pointer;
+}
+
 /* ------ Footer ------ */
