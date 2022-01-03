@@ -2,11 +2,12 @@
 :root {
   --clr-darkgreen: 72 40% 36%;
   --clr-lightgreen: 72 40% 46%;
-  --clr-yellow: 41 73% 70%;
+  --clr-yellow: 43 85% 61%;
   --clr-white: 0 0% 100%;
   --clr-light: 52 25% 88%;
   --clr-dark: 44 0% 0%;
   --clr-red: 6 39% 43%;
+  --clr-lightblue: 213 44% 95%;
 
   --clr-html: 12 78% 52%;
   --clr-css: 205 79% 40%;
@@ -32,6 +33,12 @@
 }
 
 /* ------ Reset ------ */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body,
 p,
 h1,
@@ -81,6 +88,7 @@ body {
   margin-inline: auto;
   padding-inline: 1rem;
   max-width: 80rem;
+  height: 100%;
 }
 
 .visually-hidden {
@@ -97,7 +105,12 @@ body {
 }
 
 .section {
+  padding-top: 4rem;
   padding-bottom: 8rem;
+}
+
+.section:nth-child(2n - 1) {
+  background-color: hsl(var(--clr-lightblue));
 }
 
 .title {
@@ -117,7 +130,7 @@ body {
   padding: 0.6rem;
   color: hsl(var(--clr-dark));
   font-weight: bold;
-  background-color: hsl(var(--clr-yellow));
+  background-color: hsl(var(--clr-white));
   border: none;
   border-radius: 10px;
   outline: none;
@@ -125,17 +138,21 @@ body {
   transition: 0.4s ease;
 }
 
+.button__icon {
+  width: 1.5em;
+  aspect-ratio: 1 / 1;
+}
+
 .button:hover {
   color: hsl(var(--clr-white));
-  background-color: hsl(var(--clr-red));
+  background-color: hsl(var(--clr-yellow));
+}
+
+.button:hover .button__icon {
+  fill: hsl(var(--clr-white));
 }
 
 /* ------ Header ------ */
-.header {
-  background-color: hsl(var(--clr-white));
-  box-shadow: rgba(0, 0, 0, 0.08) 0 4px 12px;
-}
-
 .header__content {
   display: flex;
   justify-content: space-between;
@@ -153,6 +170,7 @@ body {
 }
 
 .header__nav-list {
+  position: relative;
   display: flex;
   margin-inline: auto;
   gap: 1em;
@@ -160,17 +178,41 @@ body {
   font-size: 15px;
 }
 
-/* ------ Sections ------ */
+.header__nav-item {
+  transition: all 0.2s ease-in-out;
+}
 
+.header__nav-item:hover {
+  color: hsl(var(--clr-yellow));
+}
+
+.header__nav-list span.dot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background-color: hsl(var(--clr-yellow));
+  border-radius: 50%;
+  transform: translateY(-350%);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ------ Sections ------ */
 .about {
   height: 100vh;
+  margin-top: -72px;
+  padding: 0;
+  padding-top: 72px;
+  background-color: hsl(var(--clr-lightblue));
 }
 
 .about__content {
   display: flex;
   gap: 5em;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
   padding-inline: 10rem;
 }
 
@@ -194,16 +236,17 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   display: block;
   width: 100%;
   height: 100%;
-  background-color: hsl(var(--clr-light));
+  background-color: hsl(var(--clr-white));
   border-radius: 50%;
-  transform: translate(-20px, 15px);
+  transform: translate(-5px, 10px);
 }
 
 .about__img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -231,14 +274,11 @@ body {
 }
 
 .about__button {
-  /* display: inline-block; */
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
   align-self: flex-start;
-  margin: 0;
-  padding: 1rem 1.5rem;
-  /* color: hsl(var(--clr-white)); */
-  /* background-color: hsl(var(--clr-lightgreen)); */
-  border-radius: 1rem;
-  cursor: pointer;
+  background-color: transparent;
   transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
     box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -256,9 +296,9 @@ body {
 .skills__list {
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3em;
-  width: 24rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4.5em;
+  width: var(--maxwidth-content);
 }
 
 .skills__item {
@@ -488,6 +528,10 @@ body {
   background-image: url("images/icons/github-icon.svg");
 }
 
+.contact__link:hover {
+  color: hsl(var(--clr-yellow));
+}
+
 .contact__form {
   display: flex;
   flex-direction: column;
@@ -523,12 +567,15 @@ body {
 }
 
 /* ------ Footer ------ */
+.footer {
+  background-color: hsl(var(--clr-lightblue));
+}
+
 .footer__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  border-top: 1px solid hsl(var(--clr-dark) / 0.3);
 }
 
 .footer__author {
@@ -540,6 +587,10 @@ body {
 .footer__github {
   display: flex;
   gap: 0.3em;
+}
+
+.footer__github:hover {
+  color: hsl(var(--clr-yellow));
 }
 
 .footer__github::before {

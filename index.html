@@ -42,11 +42,11 @@
           <div class="header__logo">nika.</div>
           <nav class="header__nav">
             <ul class="header__nav-list">
-              <li><a href="#about">about me</a></li>
-              <li><a href="#skills">skills</a></li>
-              <li><a href="#projects">my projects</a></li>
-              <li><a href="#education">education</a></li>
-              <li><a href="#contact-me">contact me</a></li>
+              <li class="header__nav-item"><a href="#about">about me</a></li>
+              <li class="header__nav-item"><a href="#skills">skills</a></li>
+              <li class="header__nav-item"><a href="#projects">my projects</a></li>
+              <li class="header__nav-item"><a href="#education">education</a></li>
+              <li class="header__nav-item"><a href="#contact-me">contact me</a></li>
             </ul>
           </nav>
         </div>
@@ -54,7 +54,7 @@
     </header>
 
     <main>
-      <section class="about" id="about">
+      <section class="about section" id="about">
         <div class="container">
           <div class="about__content">
             <div class="about__column">
@@ -74,7 +74,19 @@
                 year student studying applied computer science. My goal is to start a career as a
                 Front-End developer.
               </p>
-              <a class="about__button button" href="#contact-me">Let's Talk </a>
+              <a class="about__button button" href="#contact-me"
+                >Let's Talk<svg
+                  class="button__icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="rgb(0, 0, 0)"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="m2.6 13.083 3.452 1.511L16 9.167l-6 7 8.6 3.916a1 1 0 0 0 1.399-.85l1-15a1.002 1.002 0 0 0-1.424-.972l-17 8a1.002 1.002 0 0 0 .025 1.822zM8 22.167l4.776-2.316L8 17.623z"
+                  ></path></svg
+              ></a>
             </div>
           </div>
         </div>
@@ -291,18 +303,22 @@
             <ul class="contact__list">
               <li class="contact__list-item email-contact">
                 <span class="visually-hidden">Email</span>
-                <a href="mailto:perfil.nika@gmail.com">perfil.nika@gmail.com</a>
+                <a class="contact__link" href="mailto:perfil.nika@gmail.com"
+                  >perfil.nika@gmail.com</a
+                >
               </li>
               <li class="contact__list-item telegram-contact">
                 <span class="visually-hidden">Telegram</span
-                ><a href="https://t.me/nika_perfilova" target="_blank">@nika_perfilova</a>
+                ><a class="contact__link" href="https://t.me/nika_perfilova" target="_blank"
+                  >@nika_perfilova</a
+                >
               </li>
               <li class="contact__list-item discord-contact">
                 <span class="visually-hidden">Discord</span>Nika Perfilova (@npwsk)
               </li>
               <li class="contact__list-item github-contact">
                 <span class="visually-hidden">Github</span
-                ><a href="https://github.com/npwsk" target="_blank">npwsk</a>
+                ><a class="contact__link" href="https://github.com/npwsk" target="_blank">npwsk</a>
               </li>
             </ul>
             <form
@@ -347,7 +363,7 @@
               >npwsk</a
             >
           </div>
-          <a href="https://rs.school/js/"
+          <a href="https://rs.school/js/" target="_blank"
             ><img src="https://rs.school/images/rs_school_js.svg" alt="RS School logo" width="100"
           /></a>
         </div>
@@ -358,5 +374,6 @@
     <script>
       hljs.highlightAll();
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
