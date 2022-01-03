@@ -566,12 +566,15 @@ body {
 }
 
 /* ------ Footer ------ */
+.footer {
+  background-color: hsl(var(--clr-lightblue));
+}
+
 .footer__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  border-top: 1px solid hsl(var(--clr-dark) / 0.3);
 }
 
 .footer__author {
@@ -583,6 +586,10 @@ body {
 .footer__github {
   display: flex;
   gap: 0.3em;
+}
+
+.footer__github:hover {
+  color: hsl(var(--clr-yellow));
 }
 
 .footer__github::before {
