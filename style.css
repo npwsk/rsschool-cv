@@ -2,7 +2,7 @@
 :root {
   --clr-darkgreen: 72 40% 36%;
   --clr-lightgreen: 72 40% 46%;
-  --clr-yellow: 41 73% 70%;
+  --clr-yellow: 43 85% 61%;
   --clr-white: 0 0% 100%;
   --clr-light: 52 25% 88%;
   --clr-dark: 44 0% 0%;
@@ -161,11 +161,33 @@ body {
 }
 
 .header__nav-list {
+  position: relative;
   display: flex;
   margin-inline: auto;
   gap: 1em;
   font-weight: 700;
   font-size: 15px;
+}
+
+.header__nav-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.header__nav-item:hover {
+  color: hsl(var(--clr-yellow));
+}
+
+.header__nav-list span.dot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background-color: hsl(var(--clr-yellow));
+  border-radius: 50%;
+  transform: translateY(-350%);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 /* ------ Sections ------ */
@@ -242,12 +264,9 @@ body {
 }
 
 .about__button {
-  /* display: inline-block; */
   align-self: flex-start;
   margin: 0;
   padding: 1rem 1.5rem;
-  /* color: hsl(var(--clr-white)); */
-  /* background-color: hsl(var(--clr-lightgreen)); */
   border-radius: 1rem;
   cursor: pointer;
   transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
