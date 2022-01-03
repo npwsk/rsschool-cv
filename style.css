@@ -296,9 +296,9 @@ body {
 .skills__list {
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3em;
-  width: 24rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4.5em;
+  width: var(--maxwidth-content);
 }
 
 .skills__item {
