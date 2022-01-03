@@ -4,7 +4,359 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV</title>
+    <title>Nika Perfilova Front-End Developer</title>
+
+    <!-- Favicon -->
+    <!-- TODO: find better icon -->
+    <link rel="icon" href="images/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="images/favicon/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css" />
+
+    <!-- Highlight.js -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/monokai.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__logo">nika.</div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li><a href="#about">about me</a></li>
+              <li><a href="#skills">skills</a></li>
+              <li><a href="#projects">my projects</a></li>
+              <li><a href="#education">education</a></li>
+              <li><a href="#contact-me">contact me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__content">
+            <div class="about__column">
+              <div class="about__img-container">
+                <img class="about__img" src="images/photo.jpg" alt="Profile pucture" />
+              </div>
+            </div>
+            <div class="about__column">
+              <h1 class="about__title">
+                <div class="about__greeting">Hi! I'm</div>
+                <div class="about__name">Nika Perfilova</div>
+                <div class="about__job-title">Front-End Developer</div>
+              </h1>
+              <p class="about__text">
+                Developing user interfaces is my passion. I am currently learning and hope to be
+                able to create good looking, user-friendly and fast interfaces soon. I am also a 3rd
+                year student studying applied computer science. My goal is to start a career as a
+                Front-End developer.
+              </p>
+              <a class="about__button button" href="#contact-me">Let's Talk </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <h2 class="skills__title title">Skills</h2>
+          <ul class="skills__list">
+            <!-- TODO: Percentages? -->
+            <li class="skills__item skills__html">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/html-icon.svg"
+                alt="HTML"
+              /><span class="visually-hidden">HTML</span>
+            </li>
+            <li class="skills__item skills__css">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/css-icon.svg"
+                alt="CSS"
+              /><span class="visually-hidden">CSS</span>
+            </li>
+            <li class="skills__item skills__sass">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/sass-icon.svg"
+                alt="SASS"
+              /><span class="visually-hidden">SASS/SCSS</span>
+            </li>
+            <li class="skills__item skills__bootstrap">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/bootstrap-icon.svg"
+                alt="Bootstrap"
+              /><span class="visually-hidden">Bootstrap</span>
+            </li>
+            <li class="skills__item skills__javascript">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/javascript-icon.svg"
+                alt="JavaScript"
+              /><span class="visually-hidden">JavaScript</span>
+            </li>
+            <li class="skills__item skills__react">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/react-icon.svg"
+                alt="React"
+              /><span class="visually-hidden">React</span>
+            </li>
+            <li class="skills__item skills__nodejs">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/nodejs-icon.svg"
+                alt="NodeJS"
+              /><span class="visually-hidden">NodeJS</span>
+            </li>
+            <li class="skills__item skills__webpack">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/webpack-icon.svg"
+                alt="Webpack"
+              /><span class="visually-hidden">Webpack</span>
+            </li>
+            <li class="skills__item skills__git">
+              <img
+                class="skills__icon"
+                aria-hidden="true"
+                src="images/skills/git-icon.svg"
+                alt="Git"
+              /><span class="visually-hidden">Git</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="code-example">
+        <div class="container">
+          <h2 class="code-example__title title">Code example</h2>
+          <div class="code-example__snippet-container">
+            <pre class="code-example__pre">
+                <code class="code-example__code language-javascript">let rotateMatrix = (arr) =&gt; {
+  const rowsCount = arr.length;
+  const [firstRow] = arr;
+  const columnsCount = firstRow.length;
+  const rotatedMatrix = [...new Array(columnsCount)].map(() =&gt; []);
+  for (let row = 0; row &lt; columnsCount; row += 1) {
+    for (let column = 0; column &lt; rowsCount; column += 1) {
+      rotatedMatrix[row][column] = arr[column][columnsCount - 1 - row];
+    }
+  }
+  return rotatedMatrix;
+};</code>
+</pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <h2 class="projects__title title">My projects</h2>
+
+          <div class="projects__content">
+            <article class="projects__card">
+              <img
+                class="card__img"
+                src="https://asciinema.org/a/A8ER7sAyTUhB3xlaIYi2s3DGE.svg"
+                alt="brain-games preview"
+              />
+              <div class="card__info">
+                <h3 class="card__title">brain-games</h3>
+                <p class="card__description">a set of five console games</p>
+                <a
+                  class="card__link button"
+                  href="https://github.com/bbngpw/frontend-project-lvl1"
+                  target="_blank"
+                  >Github</a
+                >
+              </div>
+            </article>
+            <article class="projects__card">
+              <img
+                class="card__img"
+                src="https://asciinema.org/a/iaLI8S0PyMNuzhvZ76NPhUms1.svg"
+                alt="gendiff preview"
+              />
+              <div class="card__info">
+                <h3 class="card__title">gendiff</h3>
+                <p class="card__description">a console app for comparing two files (json, yaml)</p>
+                <a
+                  class="card__link button"
+                  href="https://github.com/bbngpw/frontend-project-lvl2"
+                  target="_blank"
+                  >Github</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <!-- TODO: add tooltips with description for the courses -->
+        <div class="container">
+          <h2 class="title">Education</h2>
+          <ul class="education__list">
+            <li class="education__item">
+              <div class="education__column education__column--narrow">
+                <span class="education__date">2019 - 2024</span>
+              </div>
+              <div class="education__column education__column--wide">
+                <h3 class="item-title">
+                  Tomsk State University of Control Systems and Radioelectronics
+                </h3>
+                <p class="education__item-description">Applied Computer Science in Economics</p>
+              </div>
+            </li>
+            <li class="education__item">
+              <div class="education__column education__column--narrow">
+                <span class="education__date">2021</span>
+              </div>
+              <div class="education__column education__column--wide">
+                <h3 class="item-title">
+                  <a href="https://ru.hexlet.io/u/bbngpw">Hexlet</a>
+                </h3>
+                <p class="education__item-description">Front-End developer profession</p>
+              </div>
+            </li>
+            <li class="education__item">
+              <div class="education__column education__column--narrow">
+                <span class="education__date">2021</span>
+              </div>
+              <div class="education__column education__column--wide">
+                <h3 class="item-title">
+                  <a href="https://htmlacademy.ru/profile/id421001">HTML Academy</a>
+                </h3>
+                <!-- <p class="item__description">??</p> -->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="title">Languages</h2>
+          <ul class="languages__list">
+            <li class="languages__item">
+              <h3 class="item-title">English</h3>
+              <div class="languages__level">C1</div>
+            </li>
+            <li class="languages__item">
+              <h3 class="item-title">Russian</h3>
+              <div class="languages__level">Native</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="contact-me">
+        <div class="container">
+          <h2 class="title">Contact me</h2>
+          <div class="contact__content">
+            <ul class="contact__list">
+              <li class="contact__list-item email-contact">
+                <span class="visually-hidden">Email</span>
+                <a href="mailto:perfil.nika@gmail.com">perfil.nika@gmail.com</a>
+              </li>
+              <li class="contact__list-item telegram-contact">
+                <span class="visually-hidden">Telegram</span
+                ><a href="https://t.me/nika_perfilova" target="_blank">@nika_perfilova</a>
+              </li>
+              <li class="contact__list-item discord-contact">
+                <span class="visually-hidden">Discord</span>Nika Perfilova (@npwsk)
+              </li>
+              <li class="contact__list-item github-contact">
+                <span class="visually-hidden">Github</span
+                ><a href="https://github.com/npwsk" target="_blank">npwsk</a>
+              </li>
+            </ul>
+            <form
+              class="contact__form"
+              action="https://formsubmit.co/perfil.nika@gmail.com"
+              method="post"
+            >
+              <input type="hidden" name="_next" value="#" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <div class="contact__form-item">
+                <label class="contact__label" for="name">Your Name</label>
+                <input class="contact__input" type="text" id="name" name="name" required />
+              </div>
+              <div class="contact__form-item">
+                <label class="contact__label" for="email">Your email address</label>
+                <input class="contact__input" type="email" id="email" name="email" required />
+              </div>
+              <div class="contact__form-item">
+                <label class="contact__label" for="message">Your message...</label>
+                <textarea
+                  class="contact__textarea"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button class="contact__submit-btn" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__author">
+            © 2021
+            <a class="footer__github github-contact" href="https://github.com/npwsk" target="_blank"
+              >npwsk</a
+            >
+          </div>
+          <a href="https://rs.school/js/"
+            ><img src="https://rs.school/images/rs_school_js.svg" alt="RS School logo" width="100"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>
