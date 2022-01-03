@@ -130,7 +130,7 @@ body {
   padding: 0.6rem;
   color: hsl(var(--clr-dark));
   font-weight: bold;
-  background-color: hsl(var(--clr-yellow));
+  background-color: hsl(var(--clr-white));
   border: none;
   border-radius: 10px;
   outline: none;
@@ -138,9 +138,18 @@ body {
   transition: 0.4s ease;
 }
 
+.button__icon {
+  width: 1.5em;
+  aspect-ratio: 1 / 1;
+}
+
 .button:hover {
   color: hsl(var(--clr-white));
-  background-color: hsl(var(--clr-red));
+  background-color: hsl(var(--clr-yellow));
+}
+
+.button:hover .button__icon {
+  fill: hsl(var(--clr-white));
 }
 
 /* ------ Header ------ */
@@ -264,11 +273,11 @@ body {
 }
 
 .about__button {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
   align-self: flex-start;
-  margin: 0;
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
+  background-color: transparent;
   transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
     box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
