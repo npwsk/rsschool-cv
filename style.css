@@ -211,15 +211,18 @@ body {
 }
 
 .about__greeting {
+  display: block;
   font-weight: 400;
   font-size: 20px;
 }
 
 .about__name {
+  display: block;
   font-size: 50px;
 }
 
 .about__job-title {
+  display: block;
   font-size: 30px;
 }
 
