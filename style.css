@@ -112,6 +112,24 @@ body {
   text-transform: uppercase;
 }
 
+.button {
+  display: inline-block;
+  padding: 0.6rem;
+  color: hsl(var(--clr-dark));
+  font-weight: bold;
+  background-color: hsl(var(--clr-yellow));
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.button:hover {
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-red));
+}
+
 /* ------ Header ------ */
 .header {
   position: -webkit-sticky;
@@ -219,11 +237,12 @@ body {
   align-self: flex-start;
   margin: 0;
   padding: 1rem 1.5rem;
-  color: hsl(var(--clr-white));
-  background-color: hsl(var(--clr-lightgreen));
+  /* color: hsl(var(--clr-white)); */
+  /* background-color: hsl(var(--clr-lightgreen)); */
   border-radius: 1rem;
   cursor: pointer;
-  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .about__button:hover {
@@ -309,6 +328,75 @@ body {
   font-family: "Fira Code", monospace;
   line-height: 1.6;
   border-radius: 1em;
+}
+
+.projects__content {
+  display: flex;
+  justify-content: space-around;
+  padding-inline: 3em;
+}
+
+.projects__card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 30rem;
+  height: 15rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.4s ease-out;
+}
+
+.projects__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.projects__card:hover {
+  transform: translateY(20px);
+}
+
+.projects__card:hover::before {
+  opacity: 1;
+}
+
+.card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card__info {
+  position: relative;
+  z-index: 3;
+  color: hsl(var(--clr-white));
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card__info:hover {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card__description {
+  margin-block: 8px;
 }
 
 .education__list {
