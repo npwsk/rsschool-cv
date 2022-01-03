@@ -7,6 +7,7 @@
   --clr-light: 52 25% 88%;
   --clr-dark: 44 0% 0%;
   --clr-red: 6 39% 43%;
+  --clr-lightblue: 213 44% 95%;
 
   --clr-html: 12 78% 52%;
   --clr-css: 205 79% 40%;
@@ -32,6 +33,12 @@
 }
 
 /* ------ Reset ------ */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body,
 p,
 h1,
@@ -81,6 +88,7 @@ body {
   margin-inline: auto;
   padding-inline: 1rem;
   max-width: 80rem;
+  height: 100%;
 }
 
 .visually-hidden {
@@ -97,7 +105,12 @@ body {
 }
 
 .section {
+  padding-top: 4rem;
   padding-bottom: 8rem;
+}
+
+.section:nth-child(2n - 1) {
+  background-color: hsl(var(--clr-lightblue));
 }
 
 .title {
@@ -131,11 +144,6 @@ body {
 }
 
 /* ------ Header ------ */
-.header {
-  background-color: hsl(var(--clr-white));
-  box-shadow: rgba(0, 0, 0, 0.08) 0 4px 12px;
-}
-
 .header__content {
   display: flex;
   justify-content: space-between;
@@ -161,16 +169,19 @@ body {
 }
 
 /* ------ Sections ------ */
-
 .about {
   height: 100vh;
+  margin-top: -72px;
+  padding: 0;
+  padding-top: 72px;
+  background-color: hsl(var(--clr-lightblue));
 }
 
 .about__content {
   display: flex;
   gap: 5em;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
   padding-inline: 10rem;
 }
 
