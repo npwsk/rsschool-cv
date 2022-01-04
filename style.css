@@ -211,9 +211,9 @@ body {
 .about__content {
   display: flex;
   gap: 5em;
-  justify-content: space-between;
+  max-width: var(--maxwidth-content);
   height: 100%;
-  padding-inline: 10rem;
+  margin-inline: auto;
 }
 
 .about__column {
@@ -296,16 +296,17 @@ body {
 .skills__list {
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, 6em);
   gap: 4.5em;
-  width: var(--maxwidth-content);
+  justify-content: center;
+  padding-inline: 2rem;
 }
 
 .skills__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 6em;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
@@ -370,6 +371,8 @@ body {
 
 .projects__content {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
   justify-content: space-around;
   padding-inline: 3em;
 }
