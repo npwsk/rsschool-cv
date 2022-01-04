@@ -573,6 +573,8 @@ body {
 
 .footer__content {
   display: flex;
+  flex-direction: column-reverse;
+  gap: 1.5em;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
@@ -601,4 +603,20 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.footer__rs-container {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+  width: 100%;
+}
+
+.footer__rs-container::before,
+.footer__rs-container::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: hsl(var(--clr-dark));
 }
