@@ -328,6 +328,7 @@ body {
 
 .about__job-title {
   display: block;
+  color: hsl(var(--clr-darkblue));
   font-size: 30px;
 }
 
