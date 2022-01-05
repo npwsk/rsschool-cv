@@ -299,24 +299,61 @@
           <h2 class="title">Contact me</h2>
           <div class="contact__content">
             <ul class="contact__list">
-              <li class="contact__list-item email-contact">
-                <span class="visually-hidden">Email</span>
-                <a class="contact__link" href="mailto:perfil.nika@gmail.com"
-                  >perfil.nika@gmail.com</a
+              <li class="contact__list-item">
+                <a class="contact__link contact-item" href="mailto:perfil.nika@gmail.com">
+                  <img
+                    class="contact-item__icon"
+                    aria-hidden="true"
+                    src="images/icons/email.svg"
+                    alt="Email icon"
+                  />
+                  <span class="visually-hidden">Email</span>
+                  <span class="contact-item__text">perfil.nika@gmail.com</span>
+                </a>
+              </li>
+              <li class="contact__list-item">
+                <a
+                  class="contact__link contact-item"
+                  href="https://t.me/nika_perfilova"
+                  target="_blank"
                 >
+                  <img
+                    class="contact-item__icon"
+                    aria-hidden="true"
+                    src="images/icons/telegram.svg"
+                    alt="Telegram icon"
+                  />
+                  <span class="visually-hidden">Telegram</span>
+                  <span class="contact-item__text">@nika_perfilova</span>
+                </a>
               </li>
-              <li class="contact__list-item telegram-contact">
-                <span class="visually-hidden">Telegram</span
-                ><a class="contact__link" href="https://t.me/nika_perfilova" target="_blank"
-                  >@nika_perfilova</a
+              <li class="contact__list-item">
+                <a
+                  class="contact__link contact-item"
+                  href="https://github.com/npwsk"
+                  target="_blank"
                 >
+                  <img
+                    class="contact-item__icon"
+                    aria-hidden="true"
+                    src="images/icons/github.png"
+                    alt="Github icon"
+                  />
+                  <span class="visually-hidden">Github</span>
+                  <span class="contact-item__text">npwsk</span>
+                </a>
               </li>
-              <li class="contact__list-item discord-contact">
-                <span class="visually-hidden">Discord</span>Nika Perfilova (@npwsk)
-              </li>
-              <li class="contact__list-item github-contact">
-                <span class="visually-hidden">Github</span
-                ><a class="contact__link" href="https://github.com/npwsk" target="_blank">npwsk</a>
+              <li class="contact__list-item">
+                <div class="contact__link contact-item discord-contact">
+                  <img
+                    class="contact-item__icon"
+                    aria-hidden="true"
+                    src="images/icons/discord-color.svg"
+                    alt="Disord icon"
+                  />
+                  <span class="visually-hidden">Discord</span>
+                  <span class="contact-item__text">Nika Perfilova (@npwsk)</span>
+                </div>
               </li>
             </ul>
             <form
@@ -356,10 +393,17 @@
       <div class="container">
         <div class="footer__content">
           <div class="footer__author">
-            © 2022
-            <a class="footer__github github-contact" href="https://github.com/npwsk" target="_blank"
-              >npwsk</a
-            >
+            <a class="footer__github contact-item" href="https://github.com/npwsk" target="_blank">
+              <img
+                class="contact-item__icon"
+                aria-hidden="true"
+                src="images/icons/github.png"
+                alt="Github icon"
+              />
+              <span class="visually-hidden">Github</span>
+              <span class="contact-item__text">npwsk</span>
+            </a>
+            <span>© 2022</span>
           </div>
           <div class="footer__rs-container">
             <a class="footer__rs-link" href="https://rs.school/js/" target="_blank"
