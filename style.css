@@ -517,7 +517,7 @@ body {
 }
 
 .education__date {
-  color: hsl(var(--clr-darkgreen));
+  color: hsl(var(--clr-darkblue));
   font-size: 0.8rem;
   white-space: nowrap;
 }
