@@ -7,7 +7,6 @@
     <title>Nika Perfilova Front-End Developer</title>
 
     <!-- Favicon -->
-    <!-- TODO: find better icon -->
     <link rel="icon" href="images/favicon/favicon.ico" sizes="any" />
     <link rel="icon" href="images/favicon/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" />
@@ -36,17 +35,23 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__content">
-          <div class="header__logo">nika.</div>
-          <nav class="header__nav">
+          <nav class="header__nav" id="top-nav">
+            <div class="header__logo">nika.</div>
+
+            <input class="header__nav-btn" type="checkbox" id="nav-btn" />
+            <label class="header__nav-label" for="nav-btn"
+              ><span class="header__navicon"></span
+            ></label>
+
             <ul class="header__nav-list">
-              <li class="header__nav-item"><a href="#about">about me</a></li>
-              <li class="header__nav-item"><a href="#skills">skills</a></li>
-              <li class="header__nav-item"><a href="#projects">my projects</a></li>
-              <li class="header__nav-item"><a href="#education">education</a></li>
-              <li class="header__nav-item"><a href="#contact-me">contact me</a></li>
+              <li class="header__nav-item link"><a href="#about">about me</a></li>
+              <li class="header__nav-item link"><a href="#skills">skills</a></li>
+              <li class="header__nav-item link"><a href="#projects">my projects</a></li>
+              <li class="header__nav-item link"><a href="#education">education</a></li>
+              <li class="header__nav-item link"><a href="#contact-me">contact me</a></li>
             </ul>
           </nav>
         </div>
@@ -96,7 +101,6 @@
         <div class="container">
           <h2 class="skills__title title">Skills</h2>
           <ul class="skills__list">
-            <!-- TODO: Percentages? -->
             <li class="skills__item skills__html">
               <img
                 class="skills__icon"
@@ -239,7 +243,6 @@
       </section>
 
       <section class="section" id="education">
-        <!-- TODO: add tooltips with description for the courses -->
         <div class="container">
           <h2 class="title">Education</h2>
           <ul class="education__list">
@@ -260,9 +263,11 @@
               </div>
               <div class="education__column education__column--wide">
                 <h3 class="item-title">
-                  <a href="https://ru.hexlet.io/u/bbngpw">Hexlet</a>
+                  <a class="link" href="https://ru.hexlet.io/u/bbngpw" target="_blank">Hexlet</a>
                 </h3>
-                <p class="education__item-description">Front-End developer profession</p>
+                <p class="education__item-description">
+                  Courses from the Front-End developer profession
+                </p>
               </div>
             </li>
             <li class="education__item">
@@ -271,9 +276,10 @@
               </div>
               <div class="education__column education__column--wide">
                 <h3 class="item-title">
-                  <a href="https://htmlacademy.ru/profile/id421001">HTML Academy</a>
+                  <a class="link" href="https://htmlacademy.ru/profile/id421001" target="_blank"
+                    >HTML Academy</a
+                  >
                 </h3>
-                <!-- <p class="item__description">??</p> -->
               </div>
             </li>
           </ul>
@@ -301,24 +307,53 @@
           <h2 class="title">Contact me</h2>
           <div class="contact__content">
             <ul class="contact__list">
-              <li class="contact__list-item email-contact">
-                <span class="visually-hidden">Email</span>
-                <a class="contact__link" href="mailto:perfil.nika@gmail.com"
-                  >perfil.nika@gmail.com</a
-                >
+              <li class="contact__list-item">
+                <a class="contact-item link" href="mailto:perfil.nika@gmail.com">
+                  <img
+                    class="contact-item__icon"
+                    aria-hidden="true"
+                    src="images/icons/email.svg"
+                    alt="Email icon"
+                  />
+                  <span class="visually-hidden">Email</span>
+                  <span class="contact-item__text">perfil.nika@gmail.com</span>
+                </a>
               </li>
-              <li class="contact__list-item telegram-contact">
-                <span class="visually-hidden">Telegram</span
-                ><a class="contact__link" href="https://t.me/nika_perfilova" target="_blank"
-                  >@nika_perfilova</a
-                >
+              <li class="contact__list-item">
+                <a class="contact-item link" href="https://t.me/nika_perfilova" target="_blank">
+                  <img
+                    class="contact-item__icon"
+                    aria-hidden="true"
+                    src="images/icons/telegram.svg"
+                    alt="Telegram icon"
+                  />
+                  <span class="visually-hidden">Telegram</span>
+                  <span class="contact-item__text">@nika_perfilova</span>
+                </a>
               </li>
-              <li class="contact__list-item discord-contact">
-                <span class="visually-hidden">Discord</span>Nika Perfilova (@npwsk)
+              <li class="contact__list-item">
+                <a class="contact-item link" href="https://github.com/npwsk" target="_blank">
+                  <img
+                    class="contact-item__icon"
+                    aria-hidden="true"
+                    src="images/icons/github.png"
+                    alt="Github icon"
+                  />
+                  <span class="visually-hidden">Github</span>
+                  <span class="contact-item__text">npwsk</span>
+                </a>
               </li>
-              <li class="contact__list-item github-contact">
-                <span class="visually-hidden">Github</span
-                ><a class="contact__link" href="https://github.com/npwsk" target="_blank">npwsk</a>
+              <li class="contact__list-item">
+                <div class="contact-item discord-contact">
+                  <img
+                    class="contact-item__icon"
+                    aria-hidden="true"
+                    src="images/icons/discord-color.svg"
+                    alt="Disord icon"
+                  />
+                  <span class="visually-hidden">Discord</span>
+                  <span class="contact-item__text">Nika Perfilova (@npwsk)</span>
+                </div>
               </li>
             </ul>
             <form
@@ -358,14 +393,30 @@
       <div class="container">
         <div class="footer__content">
           <div class="footer__author">
-            © 2021
-            <a class="footer__github github-contact" href="https://github.com/npwsk" target="_blank"
-              >npwsk</a
+            <a
+              class="footer__github contact-item link"
+              href="https://github.com/npwsk"
+              target="_blank"
             >
+              <img
+                class="contact-item__icon"
+                aria-hidden="true"
+                src="images/icons/github.png"
+                alt="Github icon"
+              />
+              <span class="visually-hidden">Github</span>
+              <span class="contact-item__text">npwsk</span>
+            </a>
+            <span>© 2022</span>
           </div>
-          <a href="https://rs.school/js/" target="_blank"
-            ><img src="https://rs.school/images/rs_school_js.svg" alt="RS School logo" width="100"
-          /></a>
+          <div class="footer__rs-container">
+            <a class="footer__rs-link" href="https://rs.school/js/" target="_blank"
+              ><img
+                src="https://rs.school/images/rs_school_js.svg"
+                alt="RS School logo"
+                width="100"
+            /></a>
+          </div>
         </div>
       </div>
     </footer>

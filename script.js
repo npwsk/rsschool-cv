@@ -1,3 +1,17 @@
+let lastScrollpos = window.pageYOffset;
+let menuButtonCheck = document.querySelector('.header__nav-btn');
+
+window.addEventListener('scroll', function () {
+  let currentScrollPos = window.pageYOffset;
+  if (lastScrollpos > currentScrollPos) {
+    document.getElementById('header').style.top = '0';
+  } else {
+    document.getElementById('header').style.top = '-75px';
+  }
+  lastScrollpos = currentScrollPos;
+  menuButtonCheck.checked = false;
+});
+
 window.addEventListener('load', function () {
   var movingDot = new MovingDot('.header__nav-list');
 });
