@@ -8,6 +8,7 @@
   --clr-dark: 44 0% 0%;
   --clr-red: 6 39% 43%;
   --clr-lightblue: 213 44% 95%;
+  --clr-darkblue: 236 37% 39%;
 
   --clr-html: 12 78% 52%;
   --clr-css: 205 79% 40%;
@@ -262,6 +263,9 @@ body {
   height: 100vh;
   padding: 0;
   background-color: hsl(var(--clr-lightblue));
+  background-image: url("/images/about-bg.svg");
+  background-position: bottom;
+  background-size: cover;
 }
 
 .about__content {
