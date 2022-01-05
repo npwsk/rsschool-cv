@@ -444,6 +444,7 @@ body {
   width: 30rem;
   height: 15rem;
   padding: 1.5rem;
+  overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-out;
@@ -458,9 +459,14 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0 0% 0% / 0) 0%,
+    hsla(0 0% 0% / 0.4) 20%,
+    hsla(0 0% 0% / 0.8) 100%
+  );
   border-radius: 15px;
-  opacity: 0;
+  transform: translateY(80%);
   transition: all 0.5s ease;
 }
 
@@ -469,7 +475,7 @@ body {
 }
 
 .projects__card:hover::before {
-  opacity: 1;
+  transform: translateY(0);
 }
 
 .card__img {
@@ -486,18 +492,27 @@ body {
   position: relative;
   z-index: 3;
   color: hsl(var(--clr-white));
-  transform: translateY(30px);
-  opacity: 0;
+  transform: translateY(100px);
   transition: all 0.5s ease;
 }
 
-.card__info:hover {
+.projects__card:hover .card__info {
   transform: translateY(0);
+}
+
+.projects__card:hover .card__description,
+.projects__card:hover .card__link {
   opacity: 1;
 }
 
 .card__description {
   margin-block: 8px;
+}
+
+.card__link,
+.card__description {
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .education__list {
@@ -669,6 +684,17 @@ body {
 
   .about__button {
     align-self: center;
+  }
+
+  .projects__card::before {
+    transform: translateY(0);
+  }
+
+  .card__info,
+  .card__description,
+  .card__link {
+    transform: translateY(0);
+    opacity: 1;
   }
 
   .contact__content {
