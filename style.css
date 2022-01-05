@@ -152,6 +152,14 @@ body {
   fill: hsl(var(--clr-white));
 }
 
+.link {
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: hsl(var(--clr-yellow));
+}
+
 /* ------ Header ------ */
 .header__content {
   display: flex;
@@ -180,10 +188,6 @@ body {
 
 .header__nav-item {
   transition: all 0.2s ease-in-out;
-}
-
-.header__nav-item:hover {
-  color: hsl(var(--clr-yellow));
 }
 
 .header__nav-list span.dot {
@@ -445,7 +449,7 @@ body {
   flex-direction: column;
   gap: 1.5em;
   margin-inline: auto;
-  max-width: calc(var(--maxwidth-content) * 0.9);
+  max-width: calc(var(--maxwidth-content) * 0.7);
 }
 
 .education__item {
@@ -453,12 +457,13 @@ body {
 }
 
 .education__column--narrow {
-  min-width: 10rem;
+  min-width: 7rem;
 }
 
 .education__date {
   color: hsl(var(--clr-darkgreen));
   font-size: 0.8rem;
+  white-space: nowrap;
 }
 
 .education__item-description {
@@ -500,10 +505,6 @@ body {
   margin-bottom: 2em;
 }
 
-.contact__link {
-  border-radius: 10px;
-}
-
 .contact-item {
   display: flex;
   flex-direction: row-reverse;
@@ -515,14 +516,6 @@ body {
 .contact-item__icon {
   width: 1.5em;
   aspect-ratio: 1 / 1;
-}
-
-.contact-item:hover {
-  color: hsl(var(--clr-yellow));
-}
-
-.discord-contact:hover {
-  color: inherit;
 }
 
 .contact__form {
@@ -628,5 +621,20 @@ body {
 
   .contact__list {
     align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .education__item {
+    flex-direction: column;
+    padding-bottom: 1em;
+  }
+
+  .education__item:not(:last-child) {
+    border-bottom: 1px solid hsl(var(--clr-dark) / 0.3);
+  }
+
+  .education__column--narrow {
+    width: 100%;
   }
 }

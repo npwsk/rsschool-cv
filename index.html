@@ -42,11 +42,11 @@
           <div class="header__logo">nika.</div>
           <nav class="header__nav">
             <ul class="header__nav-list">
-              <li class="header__nav-item"><a href="#about">about me</a></li>
-              <li class="header__nav-item"><a href="#skills">skills</a></li>
-              <li class="header__nav-item"><a href="#projects">my projects</a></li>
-              <li class="header__nav-item"><a href="#education">education</a></li>
-              <li class="header__nav-item"><a href="#contact-me">contact me</a></li>
+              <li class="header__nav-item link"><a href="#about">about me</a></li>
+              <li class="header__nav-item link"><a href="#skills">skills</a></li>
+              <li class="header__nav-item link"><a href="#projects">my projects</a></li>
+              <li class="header__nav-item link"><a href="#education">education</a></li>
+              <li class="header__nav-item link"><a href="#contact-me">contact me</a></li>
             </ul>
           </nav>
         </div>
@@ -258,9 +258,11 @@
               </div>
               <div class="education__column education__column--wide">
                 <h3 class="item-title">
-                  <a href="https://ru.hexlet.io/u/bbngpw">Hexlet</a>
+                  <a class="link" href="https://ru.hexlet.io/u/bbngpw" target="_blank">Hexlet</a>
                 </h3>
-                <p class="education__item-description">Front-End developer profession</p>
+                <p class="education__item-description">
+                  Courses from the Front-End developer profession
+                </p>
               </div>
             </li>
             <li class="education__item">
@@ -269,9 +271,10 @@
               </div>
               <div class="education__column education__column--wide">
                 <h3 class="item-title">
-                  <a href="https://htmlacademy.ru/profile/id421001">HTML Academy</a>
+                  <a class="link" href="https://htmlacademy.ru/profile/id421001" target="_blank"
+                    >HTML Academy</a
+                  >
                 </h3>
-                <!-- <p class="item__description">??</p> -->
               </div>
             </li>
           </ul>
@@ -300,7 +303,7 @@
           <div class="contact__content">
             <ul class="contact__list">
               <li class="contact__list-item">
-                <a class="contact__link contact-item" href="mailto:perfil.nika@gmail.com">
+                <a class="contact-item link" href="mailto:perfil.nika@gmail.com">
                   <img
                     class="contact-item__icon"
                     aria-hidden="true"
@@ -312,11 +315,7 @@
                 </a>
               </li>
               <li class="contact__list-item">
-                <a
-                  class="contact__link contact-item"
-                  href="https://t.me/nika_perfilova"
-                  target="_blank"
-                >
+                <a class="contact-item link" href="https://t.me/nika_perfilova" target="_blank">
                   <img
                     class="contact-item__icon"
                     aria-hidden="true"
@@ -328,11 +327,7 @@
                 </a>
               </li>
               <li class="contact__list-item">
-                <a
-                  class="contact__link contact-item"
-                  href="https://github.com/npwsk"
-                  target="_blank"
-                >
+                <a class="contact-item link" href="https://github.com/npwsk" target="_blank">
                   <img
                     class="contact-item__icon"
                     aria-hidden="true"
@@ -344,7 +339,7 @@
                 </a>
               </li>
               <li class="contact__list-item">
-                <div class="contact__link contact-item discord-contact">
+                <div class="contact-item discord-contact">
                   <img
                     class="contact-item__icon"
                     aria-hidden="true"
@@ -393,7 +388,11 @@
       <div class="container">
         <div class="footer__content">
           <div class="footer__author">
-            <a class="footer__github contact-item" href="https://github.com/npwsk" target="_blank">
+            <a
+              class="footer__github contact-item link"
+              href="https://github.com/npwsk"
+              target="_blank"
+            >
               <img
                 class="contact-item__icon"
                 aria-hidden="true"
