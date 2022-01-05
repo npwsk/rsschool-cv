@@ -117,13 +117,13 @@ body {
 }
 
 .title {
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
   text-align: center;
 }
 
 .item-title {
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 700;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
@@ -535,7 +535,8 @@ body {
 
 .education__date {
   color: hsl(var(--clr-darkblue));
-  font-size: 0.8rem;
+  font-weight: 700;
+  font-size: 0.7rem;
   white-space: nowrap;
 }
 
