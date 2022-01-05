@@ -7,7 +7,6 @@
     <title>Nika Perfilova Front-End Developer</title>
 
     <!-- Favicon -->
-    <!-- TODO: find better icon -->
     <link rel="icon" href="images/favicon/favicon.ico" sizes="any" />
     <link rel="icon" href="images/favicon/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" />
@@ -36,11 +35,17 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__content">
-          <div class="header__logo">nika.</div>
-          <nav class="header__nav">
+          <nav class="header__nav" id="top-nav">
+            <div class="header__logo">nika.</div>
+
+            <input class="header__nav-btn" type="checkbox" id="nav-btn" />
+            <label class="header__nav-label" for="nav-btn"
+              ><span class="header__navicon"></span
+            ></label>
+
             <ul class="header__nav-list">
               <li class="header__nav-item link"><a href="#about">about me</a></li>
               <li class="header__nav-item link"><a href="#skills">skills</a></li>

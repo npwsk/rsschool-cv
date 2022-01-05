@@ -115,7 +115,6 @@ body {
 
 .title {
   margin-bottom: 2em;
-  /* font-weight: 400; */
   text-align: center;
 }
 
@@ -161,11 +160,20 @@ body {
 }
 
 /* ------ Header ------ */
-.header__content {
+.header {
+  position: fixed;
+  z-index: var(--zindex-fixed);
+  width: 100%;
+  background-color: hsl(var(--clr-white));
+  transition: top 0.75s ease-in;
+}
+
+.header__nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-block: 15px;
+  padding-block: 1rem;
 }
 
 .header__logo {
@@ -173,42 +181,86 @@ body {
   font-size: 28px;
 }
 
-.header__nav {
-  margin-inline: auto;
-}
-
 .header__nav-list {
   position: relative;
   display: flex;
+  flex-direction: column;
   margin-inline: auto;
   gap: 1em;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
   font-weight: 700;
   font-size: 15px;
+  transition: max-height 0.2s ease-out;
 }
 
 .header__nav-item {
   transition: all 0.2s ease-in-out;
 }
 
-.header__nav-list span.dot {
+.header__nav-label {
+  display: inline-block;
+  padding: 18px 20px;
+  cursor: pointer;
+}
+
+.header__navicon {
+  position: relative;
+  display: block;
+  width: 1.63rem;
+  height: 2px;
+  background: hsl(var(--clr-dark));
+}
+
+.header__navicon::before,
+.header__navicon::after {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 7px;
-  height: 7px;
-  background-color: hsl(var(--clr-yellow));
-  border-radius: 50%;
-  transform: translateY(-350%);
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: hsl(var(--clr-dark));
+  transition: all 0.2s ease-out;
+}
+
+.header__navicon::before {
+  top: 7px;
+}
+
+.header__navicon::after {
+  top: -7px;
+}
+
+.header__nav-btn {
+  display: none;
+}
+
+.header__nav-btn:checked ~ .header__nav-list {
+  max-height: 300px;
+}
+
+.header__nav-btn:checked ~ .header__nav-label .header__navicon {
+  background: transparent;
+}
+
+.header__nav-btn:checked ~ .header__nav-label .header__navicon::before {
+  transform: rotate(-45deg);
+}
+
+.header__nav-btn:checked ~ .header__nav-label .header__navicon::after {
+  transform: rotate(45deg);
+}
+
+.header__nav-btn:checked ~ .header__nav-label:not(.steps) .header__navicon::before,
+.header__nav-btn:checked ~ .header__nav-label:not(.steps) .header__navicon::after {
+  top: 0;
 }
 
 /* ------ Sections ------ */
 .about {
   height: 100vh;
-  margin-top: -72px;
   padding: 0;
-  padding-top: 72px;
   background-color: hsl(var(--clr-lightblue));
 }
 
@@ -603,7 +655,7 @@ body {
   .about__content {
     flex-direction: column;
     align-items: center;
-    padding-block: 5rem;
+    padding-block: 7rem;
   }
 
   .about__column {
@@ -636,5 +688,31 @@ body {
 
   .education__column--narrow {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__nav-list {
+    flex-direction: row;
+    width: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .header__navicon {
+    display: none;
+  }
+
+  .header__nav-list span.dot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background-color: hsl(var(--clr-yellow));
+    border-radius: 50%;
+    transform: translateY(-350%);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
   }
 }
