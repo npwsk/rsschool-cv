@@ -4,7 +4,7 @@
 
 **E-mail:** [perfil.nika@gmail.com](mailto:perfil.nika@gmail.com)\
 **Telegram:** [nika_perfilova](https://t.me/nika_perfilova)\
-**Discord:** Nika Perfilova (@npwsk)\
+**Discord:** [Nika Perfilova (@npwsk) / bbngpw#3691](https://discordapp.com/users/869858264182030356)\
 **GitHub:** [npwsk](https://github.com/npwsk)
 
 ## About Me:
